@@ -41,7 +41,9 @@ const ResisterModal = () => {
     axios
       .post("/api/register", data)
       .then(() => {
+        toast.success("Resister success");
         registerModal.onClose();
+        loginModal.onOpen();
       })
       .catch((error) => {
         toast.error("something wrong");
