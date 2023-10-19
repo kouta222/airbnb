@@ -8,7 +8,7 @@ export default async function renameField() {
     if (reservation.useId) {
       await client.reservation.update({
         where: { id: reservation.id },
-        data: { userId: reservation.useId, useId: null }
+        data: { useId: reservation.useId }
       });
     }
   }

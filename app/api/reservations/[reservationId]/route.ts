@@ -15,7 +15,7 @@ export async function DELETE(
   const currentUser = await getCurrentUser();
 
   if (!currentUser) {
-    return NextResponse.error;
+    return NextResponse.error();
   }
 
   const { reservationId } = params;
